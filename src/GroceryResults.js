@@ -1,5 +1,10 @@
 import React from "react";
+import styled from 'styled-components'
 
+const Button = styled.button`
+  font-size: 12px;
+  vertical-align: center;  
+`
 export default class GroceryResults extends React.Component {
   render() {
     return (
@@ -8,7 +13,10 @@ export default class GroceryResults extends React.Component {
 
         {this.props.list.map((item, index) => {
           return (
-              <li key={index}>{item}</li>
+            <>
+              <li key={index}>{item} <Button onClick={this.props.handleDelete}>Delete</Button></li>
+              
+            </>
           );
         })}
       </>

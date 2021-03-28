@@ -8,7 +8,7 @@ export default class App extends React.Component {
     super(props);
 
     this.state = {
-      list: [], 
+      list: ['beans'], 
       recipes: [],
     }
   }
@@ -38,6 +38,10 @@ export default class App extends React.Component {
       .catch(console.error);
   };
 
+  //fetch data from database server
+   getGroceryList = () => {
+
+   }
 
 
   handleSubmit = (event) => {
@@ -45,17 +49,28 @@ export default class App extends React.Component {
     this.setState({
       list: this.state.list.concat(event.target.grocery.value)
     })
+    console.log(this.state.list)
     this.getData(event.target.grocery.value)
   }
 
+  handleDelete = (event) => {
+    event.preventDefault()
+    console.log('deleted')
+    this.setState({
+      list: this.state.list.filter(function(items){
+        return items !== event.target.value
+      })
+    })
+  }
+
   render() {
-    console.log(this.state.recipes)
     return (
       <div className="App">
         <header className="App-header">
           <h1>This is Recipe App</h1>
           <GroceryMain 
           handleSubmit={this.handleSubmit}
+          handleDelete = {this.handleDelete}
           list={this.state.list}
           recipes={this.state.recipes}
           />

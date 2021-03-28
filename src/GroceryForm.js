@@ -7,7 +7,7 @@ export default class GroceryForm extends React.Component {
     return (
       <>
         <form onSubmit={this.props.handleSubmit}>
-        <h4>Add new grocery item</h4>
+        <h5>Add new grocery item</h5>
 
           <input name="grocery" type="text" />
           

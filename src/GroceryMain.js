@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import GroceryForm from "./GroceryForm";
 import GroceryResults from "./GroceryResults";
 import RecipeResults from "./RecipeResults";
-import config from "./config";
 
 export default class GroceryMain extends Component {
     
@@ -14,7 +13,10 @@ export default class GroceryMain extends Component {
         handleSubmit={this.props.handleSubmit} 
         list={this.props.list}
         />
-        <GroceryResults list={this.props.list} />
+        <GroceryResults 
+        list={this.props.list} 
+        handleDelete = {this.props.handleDelete}
+        />
         <RecipeResults recipes={this.props.recipes} />
       </>
     );

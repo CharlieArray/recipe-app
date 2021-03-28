@@ -38,7 +38,7 @@ export default class App extends React.Component {
       .catch(console.error);
   };
 
-  //fetch data from database server
+  //fetch data from SQL database server
    getGroceryList = () => {
 
    }

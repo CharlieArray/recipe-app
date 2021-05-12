@@ -1,8 +1,7 @@
 import "./App.css";
 import React from "react";
-import GroceryMain from "./GroceryMain";
+import GroceryMain from "./MainPage/GroceryMain";
 import config from "./config";
-import grocery_cart_small from "./images/grocery_cart_small.jpg";
 
 export default class App extends React.Component {
   constructor(props) {
@@ -58,12 +57,8 @@ export default class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <h1>Grocery Cart🥕</h1>
-          <h2>Add grocery items, <br/> create recipe ideas!</h2>
-          <div>
-            <img src={grocery_cart_small} width="50%" alt="grocery logo" />
-          </div>
+        <header className="App-main">
+    
           <GroceryMain
             handleSubmit={this.handleSubmit}
             handleDelete={this.handleDelete}

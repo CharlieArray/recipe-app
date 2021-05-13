@@ -7,12 +7,14 @@ export const BoxContainer = styled.div`
     flex-direction: column;
     align-items: center;
     margin-top: 10px;
+    margin-right: 10px;
 `;
 
 export const FormContainer = styled.form`
     width: 100%;
     display: flex;
     flex-direction: column;
+    margin-right: 10px;
 `;
 
 export const MutedLink = styled.a`
@@ -55,7 +57,7 @@ export const Input = styled.input`
     }
 `;
 export const SubmitButton = styled.button`
-    width: 100%;
+    width: 90%;
     padding: 10px 30%;
     color: #fff;
     font-size: 15px;
@@ -66,8 +68,8 @@ export const SubmitButton = styled.button`
     transition: all, 240ms ease-in-out;
     background: rgb(139,231,151);
     background: linear-gradient(45deg,
-   rgba(139,231,151,1) 44%, 
-   rgba(148,201,233,1) 73%); 
+   rgba(199, 236, 238, 1) 44%, 
+   rgba(199, 236, 220, 1) 73%); 
 
     &:hover{
        filter:brightness(1.03) 

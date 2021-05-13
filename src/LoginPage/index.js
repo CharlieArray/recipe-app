@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 import {AccountContext} from './AccountContext'
 import LoginForm from './LoginForm';
 import  SignupForm  from './SignupForm';
-import envelopeMoney2 from '../images/envelopeMoney2.jpg'
+import grocery_cart_small from '../images/grocery_cart_small.jpg'
 
 
 
@@ -16,7 +16,7 @@ const Background = styled.div`
 `
 
 const BoxContainer = styled.div`
-  width: 320px;
+  width: 330px;
   margin-left: auto;
   margin-right:auto;
   min-height: 550px;
@@ -47,12 +47,12 @@ const BackDrop = styled(motion.div)`
   flex-direction: column;
   border-radius: 50%;
   transform: rotate(60deg);
-  top: -240px;
-  left: -70px;
+  top: -190px;
+  left: -80px;
   background: rgb(139,231,151);
 background: linear-gradient(45deg,
- rgba(139,231,151,1) 44%, 
- rgba(148,201,233,1) 73%); 
+ rgba(199, 236, 238, 1) 44%, 
+ rgba(199, 236, 220, 1) 73%); 
 `
 
 const HeaderContainer = styled.div`
@@ -69,9 +69,9 @@ const HeaderText = styled.h2`
   `
 
 const SmallText = styled.h5`
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 500;
-  color: #fff;
+  color: #ffffff;
   z-index: 10;
   margin: 0;
 `
@@ -80,7 +80,7 @@ const LogoContainer = styled.div`
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 25%;
+  width: 50%;
   margin-top: 20px;
 `
 
@@ -157,9 +157,9 @@ export function AccountBox(props) {
           <HeaderContainer>
               <HeaderText>Welcome</HeaderText>
                 <HeaderText>
-                    Back to Envelope
+                    Back to Grocery Cart
                     <LogoContainer>
-                      <img src={envelopeMoney2} alt="this is money envelope" width="60" height="60"></img>
+                      <img src={grocery_cart_small} alt="this is a grocery cart" width="140" height="140"></img>
                     </LogoContainer>
                 </HeaderText>
               <SmallText>Please sign in to continue </SmallText>

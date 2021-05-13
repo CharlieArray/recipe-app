@@ -8,10 +8,10 @@ import {
   BoldLink,
   SubmitButton,
 } from "./CommonComponents";
-import TokenService from '../../services/Token-Service'
+import TokenService from '../services/Token-Service'
 import { AccountContext } from "./AccountContext";
 import { withRouter } from "react-router-dom";
-import config from "../../config";
+import config from "../config";
 
 
 function SignupForm(props) {

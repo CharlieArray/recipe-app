@@ -10,8 +10,8 @@ import {
 } from "./CommonComponents";
 import { AccountContext } from "./AccountContext";
 import { withRouter } from "react-router-dom";
-import TokenService from '../../services/Token-Service'
-import config from '../../config'
+import TokenService from '../services/Token-Service'
+import config from '../config'
 
 
 function LoginForm(props) {

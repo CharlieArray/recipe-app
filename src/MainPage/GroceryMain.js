@@ -12,7 +12,7 @@ export default class GroceryMain extends Component {
         <h1>Grocery Cart🥕</h1>
         <h2>Add grocery items, <br /> create recipe ideas!</h2>
         <div>
-          <img src={grocery_cart_small} width="40%" alt="grocery logo" />
+          <img src={grocery_cart_small} width="30%" alt="grocery logo" />
         </div>
 
         <GroceryForm

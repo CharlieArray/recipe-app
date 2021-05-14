@@ -5,6 +5,7 @@ import GroceryMain from "./MainPage/GroceryMain";
 import config from "./config";
 import {Route, Switch, BrowserRouter as Router} from 'react-router-dom'
 import { AccountBox } from './LoginPage/index'
+import ItemService from './services/Item-Service'
 
 const AppContainer = styled.div`
   margin-top: 50px;
@@ -26,21 +27,9 @@ export default class App extends React.Component {
     };
   }
 
-  stringCombined = (list) => {
-    return `?ingredients=${list}&number=8&ranking=1&ignorePantry=true`;
-  };
 
   getData = (list) => {
-    fetch(`${config.API_ENDPOINT}/${this.stringCombined(list)}`, {
-      method: "get",
-      headers: {
-        "content-type": "application/json",
-        "x-rapidapi-key": "f4d8f1ff35mshfad7c63de12d1a3p1c6153jsn7fcd7cc30aeb",
-        "x-rapidapi-host":
-          "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com",
-      },
-    })
-      .then((response) => response.json())
+    return ItemService.getRecipes(list)
       .then((data) => this.setState({ recipes: data }))
       .catch(console.error);
   };
@@ -54,7 +43,10 @@ export default class App extends React.Component {
       list: this.state.list.concat(event.target.grocery.value),
     });
     console.log(this.state.list);
-    this.getData(event.target.grocery.value);
+    this.getData(event.target.grocery.value)
+    .then( () => {
+      return ItemService.createItem(event.target.grocery.value)
+    })
   };
 
   handleDelete = (event) => {

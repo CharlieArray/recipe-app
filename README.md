@@ -8,6 +8,9 @@
 ## API documentation: 
 ### Two API's were used for this project, the https://spoonacular.com/food-api was the 3rd party API used to source the recipe/meal JSON data, and back end API server used for this project is located here: https://github.com/CharlieArray/recipe-app-server 
 
+## Technology Stack used:
+### React.js, Node.js, Express, and PostgresSQL were used to develop this application.
+
 ## App Screenshots
 ### Login Page for Returning Users
 ![login](https://user-images.githubusercontent.com/59151304/118582215-9a613900-b758-11eb-81c5-24eee6a1a572.PNG)
@@ -17,6 +20,3 @@
 
 ### Main Page on User Login
 ![mainPage](https://user-images.githubusercontent.com/59151304/118582216-9a613900-b758-11eb-887e-3c20e1af8a51.PNG)
-
-## Technology used:
-### React.js, Node.js, Express, and PostgresSQL were used to develop this application.

@@ -14,7 +14,7 @@ export default class GroceryResults extends React.Component {
         {this.props.list.map((item, index) => {
           return (
             <>
-              <li key={index}>{item} <Button onClick={this.props.handleDelete}>Delete</Button></li>
+              <li key={index}>{item.item} <Button onClick={(e) => this.props.handleDelete(item.id)}>Delete</Button></li>
               
             </>
           );

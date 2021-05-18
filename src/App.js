@@ -18,46 +18,6 @@ const AppContainer = styled.div`
 `;
 
 export default class App extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      list: ["beans"],
-      recipes: [],
-    };
-  }
-
-
-  getData = (list) => {
-    return ItemService.getRecipes(list)
-      .then((data) => this.setState({ recipes: data }))
-      .catch(console.error);
-  };
-
-  //fetch data from SQL database server
-  getGroceryList = () => {};
-
-  handleSubmit = (event) => {
-    event.preventDefault();
-    this.setState({
-      list: this.state.list.concat(event.target.grocery.value),
-    });
-    console.log(this.state.list);
-    this.getData(event.target.grocery.value)
-    .then( () => {
-      return ItemService.createItem(event.target.grocery.value)
-    })
-  };
-
-  handleDelete = (event) => {
-    event.preventDefault();
-    console.log("deleted");
-    this.setState({
-      list: this.state.list.filter(function (items) {
-        return items !== event.target.value;
-      }),
-    });
-  };
 
   render() {
     return (
@@ -74,10 +34,10 @@ export default class App extends React.Component {
     
         <Route path ="/main">
           <GroceryMain
-            handleSubmit={this.handleSubmit}
-            handleDelete={this.handleDelete}
-            list={this.state.list}
-            recipes={this.state.recipes}
+            // handleSubmit={this.handleSubmit}
+            // handleDelete={this.handleDelete}
+            // list={this.state.list}
+            // recipes={this.state.recipes}
           />
          </Route>
 

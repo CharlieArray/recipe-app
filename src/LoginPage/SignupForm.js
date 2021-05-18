@@ -20,7 +20,7 @@ function SignupForm(props) {
   const onSubmit = (event) => {
     event.preventDefault();
 
-    fetch(`${config.SERVER_ENDPOINT}/users`, {
+    fetch(`${config.SERVER_ENDPOINT}/api/users`, {
       method: "post",
       headers: {
         "content-type": "application/json",
@@ -32,7 +32,7 @@ function SignupForm(props) {
       }),
     })
       .then((res) => {
-        return fetch(`${config.SERVER_ENDPOINT}/auth/login`, {
+        return fetch(`${config.SERVER_ENDPOINT}/api/auth/login`, {
           method: "post",
           headers: {
             "content-type": "application/json",

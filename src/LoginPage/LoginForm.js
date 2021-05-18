@@ -19,7 +19,7 @@ function LoginForm(props) {
 
   const onSubmit = (event) => {
     event.preventDefault();
-    fetch(`${config.SERVER_ENDPOINT}/auth/login`, {
+    fetch(`${config.SERVER_ENDPOINT}/api/auth/login`, {
       method: "post",
       headers: {
         "content-type": "application/json",

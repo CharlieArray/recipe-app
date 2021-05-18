@@ -2,10 +2,8 @@ import "./App.css";
 import React from "react";
 import styled from 'styled-components'
 import GroceryMain from "./MainPage/GroceryMain";
-import config from "./config";
 import {Route, Switch, BrowserRouter as Router} from 'react-router-dom'
 import { AccountBox } from './LoginPage/index'
-import ItemService from './services/Item-Service'
 
 const AppContainer = styled.div`
   margin-top: 50px;
@@ -33,12 +31,7 @@ export default class App extends React.Component {
         <header className="App-main">
     
         <Route path ="/main">
-          <GroceryMain
-            // handleSubmit={this.handleSubmit}
-            // handleDelete={this.handleDelete}
-            // list={this.state.list}
-            // recipes={this.state.recipes}
-          />
+          <GroceryMain/>
          </Route>
 
         </header>

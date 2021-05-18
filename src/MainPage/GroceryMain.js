@@ -41,14 +41,12 @@ export default class GroceryMain extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    console.log(this.state.list);
     return ItemService.createItem(event.target.grocery.value)
     .then( () => {
      return this.getGroceryList()})
   };
 
   handleDelete = (id) => {
-    console.log("deleted");
     ItemService.deleteItem(id)
     .then( () => {
       return this.getGroceryList()})

@@ -67,7 +67,9 @@ function SignupForm(props) {
           type="password"
           placeholder="Password"
           name="password"
-          minLength="8"
+          // minLength="8"
+          pattern ="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,16}$"
+          title="Must contain at least one number, one uppercase and lowercase letter, and between 8 and 16 characters"
         />
         <Input type="password" placeholder="Confirm Password" />
 

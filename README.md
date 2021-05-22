@@ -5,6 +5,10 @@
 ## App summary:
 ### The grocery cart app is a unique app that when a user adds an item to the list, the app recommends recipe ideas/meal ideas based on item added. This app is designed for casual users who want to shop and maintain a grocery list, but also would like new meal ideas. 
 
+## Demo Credentials:
+Username: ChickenAndWaffles
+Password: AllTheWaffles1!
+
 ## API documentation: 
 ### Two API's were used for this project, the https://spoonacular.com/food-api was the 3rd party API used to source the recipe/meal JSON data, and back end API server used for this project is located here: https://github.com/CharlieArray/recipe-app-server 
 

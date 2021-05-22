@@ -7,6 +7,7 @@
 
 ## Demo Credentials:
 Username: ChickenAndWaffles
+
 Password: AllTheWaffles1!
 
 ## API documentation: 

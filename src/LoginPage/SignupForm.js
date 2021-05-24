@@ -20,6 +20,14 @@ function SignupForm(props) {
   const onSubmit = (event) => {
     event.preventDefault();
 
+    if(!event.target.user_name.value || !event.target.password.value || !event.target.email.value || !event.target.password.value){
+      return alert("Please Fill In All Form Fields");  
+    }
+
+    if(event.target.password.value !== event.target.confirmpassword.value){
+      return alert("Passwords Not Matching")
+    }
+
     fetch(`${config.SERVER_ENDPOINT}/api/users`, {
       method: "post",
       headers: {
@@ -48,7 +56,7 @@ function SignupForm(props) {
       .then((data) => {
         TokenService.saveAuthToken(data.authToken);
         props.history.push("/main");
-      });
+      })
   };
 
   return (
@@ -65,11 +73,14 @@ function SignupForm(props) {
           type="password"
           placeholder="Password"
           name="password"
-          // minLength="8"
+          minLength="8"
           pattern ="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,16}$"
           title="Must contain at least one number, one uppercase and lowercase letter, and between 8 and 16 characters"
         />
-        <Input type="password" placeholder="Confirm Password" />
+        <Input 
+        type="password" 
+        name="confirmpassword"
+        placeholder="Confirm Password" />
 
         <Marginer direction="vertical" margin={5} />
         {/* <MutedLink href="#">Forgot your password</MutedLink>

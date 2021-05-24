@@ -45,9 +45,9 @@ function LoginForm(props) {
         <MutedLink href="#">Forgot your password</MutedLink>
         <Marginer direction="vertical" margin="1.6 em" />
         <SubmitButton type="submit">Sign in</SubmitButton>
-        <MutedLink href="#">
+        <MutedLink>
           Don't have account?
-          <BoldLink href="#" onClick={switchToSignup}>
+          <BoldLink type="button" onClick={switchToSignup}>
             Sign up
           </BoldLink>
         </MutedLink>

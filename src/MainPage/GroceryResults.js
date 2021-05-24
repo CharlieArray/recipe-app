@@ -4,6 +4,7 @@ import styled from 'styled-components'
 const Button = styled.button`
   font-size: 12px;
   vertical-align: center;  
+  background-color: #ffeaa7;
 `
 export default class GroceryResults extends React.Component {
   render() {

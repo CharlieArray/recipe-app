@@ -49,8 +49,6 @@ function SignupForm(props) {
         TokenService.saveAuthToken(data.authToken);
         props.history.push("/main");
       });
-
-    props.history.push("/main");
   };
 
   return (
@@ -77,9 +75,9 @@ function SignupForm(props) {
         {/* <MutedLink href="#">Forgot your password</MutedLink>
         <Marginer direction="vertical" margin="1.6 em" /> */}
         <SubmitButton type="submit">Create Account</SubmitButton>
-        <MutedLink href="#">
+        <MutedLink>
           Already have an account?
-          <BoldLink href="#" onClick={switchToSignin}>
+          <BoldLink type="button" onClick={switchToSignin}>
             Login
           </BoldLink>
         </MutedLink>

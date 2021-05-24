@@ -1,11 +1,13 @@
 import React, { useState } from 'react'
+import { useHistory } from 'react-router-dom'
 import styled from "styled-components";
 import { motion } from 'framer-motion'
 import {AccountContext} from './AccountContext'
 import LoginForm from './LoginForm';
-import  SignupForm  from './SignupForm';
+import SignupForm  from './SignupForm';
+import config from '../config'
+import TokenService from '../services/Token-Service'
 import grocery_cart_small from '../images/grocery_cart_small.jpg'
-
 
 
 const Background = styled.div`
@@ -28,6 +30,24 @@ const BoxContainer = styled.div`
   position: relative;
   overflow: hidden;
 `;
+
+const Button = styled.button`
+    width: 100%;
+    padding: 5px 20%;
+    color: #fff;
+    font-size: 13px;
+    font-weight:600;
+    border: none;
+    border-radius: 100px 100px 100px 100px;
+    background: rgb(139,231,151);
+    background: linear-gradient(45deg,
+     rgba(199, 236, 238, 1) 44%, 
+     rgba(199, 236, 220, 1) 73%); 
+
+    &:hover{
+       filter:brightness(1.03) 
+    }
+`
 
 const TopContainer = styled.div`
   width: 100%;
@@ -141,6 +161,26 @@ export function AccountBox(props) {
 
   const contextValue = { switchToSignup, switchToSignin};
 
+  const history = useHistory();
+  const onSubmit = (event) => {
+    event.preventDefault();
+    fetch(`${config.SERVER_ENDPOINT}/api/auth/login`, {
+      method: "post",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify({
+        user_name: "ChickenAndWaffles",
+        password: "AllTheWaffles1!",
+      }),
+    })
+    .then(res => res.json())
+    .then(data => {
+      TokenService.saveAuthToken(data.authToken)
+      history.push("/main");
+    })
+  };
+
   return (
     <AccountContext.Provider value={contextValue}>
     <Background>
@@ -171,6 +211,7 @@ export function AccountBox(props) {
               <SmallText>Please sign up to continue</SmallText>
           </HeaderContainer>}
       </TopContainer>
+      <Button onClick={onSubmit}>Demo Account</Button>
       <InnerContainer>
         {active === 'signin' && <LoginForm/> }
         {active === 'signup' && <SignupForm/> }

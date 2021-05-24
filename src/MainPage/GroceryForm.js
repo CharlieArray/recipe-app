@@ -1,8 +1,15 @@
 import React from "react";
+import styled from 'styled-components';
+
+
+const Button = styled.button`
+  font-size: 12px;
+  vertical-align: center;  
+  background-color: #ffeaa7;
+`
 
 export default class GroceryForm extends React.Component {
 
-    
   render() {
     return (
       <>
@@ -10,7 +17,7 @@ export default class GroceryForm extends React.Component {
 
           <input name="grocery" type="text" />
           
-          <button type="submit">Submit</button>
+          <Button type="submit">Submit</Button>
 
         </form>
       </>

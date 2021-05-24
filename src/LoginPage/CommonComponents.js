@@ -17,7 +17,7 @@ export const FormContainer = styled.form`
     margin-right: 10px;
 `;
 
-export const MutedLink = styled.a`
+export const MutedLink = styled.div`
     font-size: 12px;
     margin: 8px;
     color: rgba(148,180,233,1); 
@@ -25,7 +25,7 @@ export const MutedLink = styled.a`
     text-decoration: none;
 `;
 
-export const BoldLink = styled.a`
+export const BoldLink = styled.button`
     font-size: 12px;
     margin: 8px;
     color: rgba(238,134,202,1);

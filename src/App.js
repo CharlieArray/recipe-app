@@ -1,9 +1,9 @@
 import "./App.css";
 import React from "react";
-import styled from 'styled-components'
+import styled from "styled-components";
 import GroceryMain from "./MainPage/GroceryMain";
-import {Route, Switch, BrowserRouter as Router} from 'react-router-dom'
-import { AccountBox } from './LoginPage/index'
+import { Route, Switch, BrowserRouter as Router } from "react-router-dom";
+import { AccountBox } from "./LoginPage/index";
 
 const AppContainer = styled.div`
   margin-top: 50px;
@@ -16,31 +16,31 @@ const AppContainer = styled.div`
 `;
 
 export default class App extends React.Component {
-
   render() {
     return (
-    <Router>
-      <Switch>
+      <Router>
 
         {/*Login/ Signup*/}
-        <Route exact path ="/">
+        <Switch>
+          <Route exact path="/">
             <AppContainer>
-              <AccountBox/>
+              <AccountBox />
             </AppContainer>
           </Route>
+        </Switch>
 
-      <div className="App">
-        <header className="App-main">
-    
-        {/*Grocery Page*/}
-        <Route path ="/main">
-          <GroceryMain/>
-         </Route>
-
-        </header>
-      </div>  
-      </Switch>
-    </Router>
+        <div className="App">
+          <header className="App-main">
+            
+            {/*Grocery Page*/}
+            <Switch>
+              <Route path="/main">
+                <GroceryMain />
+              </Route>
+            </Switch>
+          </header>
+        </div>
+      </Router>
     );
   }
 }

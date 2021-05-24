@@ -6,7 +6,9 @@
 ### The grocery cart app is a unique app that when a user adds an item to the list, the app recommends recipe ideas/meal ideas based on item added. This app is designed for casual users who want to shop and maintain a grocery list, but also would like new meal ideas. 
 
 ## Getting Started With App:
-### Demo Credentials are provided below, additionally on the app their is a "Demo Account" you can click on that logs in using below credentials:
+
+Demo Credentials are provided below, additionally on the app there is a "Demo Account" you can click on that logs in using below credentials:
+
 Username: ChickenAndWaffles
 
 Password: AllTheWaffles1!

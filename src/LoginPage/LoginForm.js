@@ -38,9 +38,6 @@ function LoginForm(props) {
         TokenService.saveAuthToken(data.authToken);
         props.history.push("/main");
       })
-      .catch(
-         alert('Login Error; Please Try Again')
-      )
   };
 
   return (

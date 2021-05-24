@@ -8,6 +8,7 @@
 ## Getting Started With App:
 ### Demo Credentials are provided below, additionally on the app their is a "Demo Account" you can click on that logs in using below credentials:
 Username: ChickenAndWaffles
+
 Password: AllTheWaffles1!
 
 ## API documentation: 

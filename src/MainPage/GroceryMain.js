@@ -28,7 +28,7 @@ export default class GroceryMain extends Component {
   };
 
 
-  //fetch data from SQL database server
+  //fetch data from SQL database server and setState
   getGroceryList = () => {
     ItemService.getItems()
     .then(items => {
@@ -39,6 +39,7 @@ export default class GroceryMain extends Component {
     })
   };
 
+  //Submit handler function to get users grocery list
   handleSubmit = (event) => {
     event.preventDefault();
     return ItemService.createItem(event.target.grocery.value)
@@ -46,6 +47,7 @@ export default class GroceryMain extends Component {
      return this.getGroceryList()})
   };
 
+  //Submit handler to delete item from users grocery list and update state with getGroceryList()
   handleDelete = (id) => {
     ItemService.deleteItem(id)
     .then( () => {
@@ -58,9 +60,7 @@ export default class GroceryMain extends Component {
       <>
         <h1>Grocery Cart🥕</h1>
         <h2>Add grocery items, <br /> create recipe ideas!</h2>
-        <div>
-          <img src={grocery_cart_small} width="30%" alt="grocery logo" />
-        </div>
+        <div><img src={grocery_cart_small} width="30%" alt="grocery logo" /> </div>
 
         <GroceryForm
           handleSubmit={this.handleSubmit}

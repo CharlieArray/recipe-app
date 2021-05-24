@@ -9,7 +9,10 @@ import config from '../config'
 import TokenService from '../services/Token-Service'
 import grocery_cart_small from '../images/grocery_cart_small.jpg'
 
+// Login / Signup Component
 
+
+//Styled Component Elements
 const Background = styled.div`
   width: 100%;
   display: flex;
@@ -161,6 +164,7 @@ export function AccountBox(props) {
 
   const contextValue = { switchToSignup, switchToSignin};
 
+  // Demo Account Fetch Request
   const history = useHistory();
   const onSubmit = (event) => {
     event.preventDefault();

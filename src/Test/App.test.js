@@ -3,8 +3,6 @@ import ReactDOM from 'react-dom';
 import App from '../App';
 import GroceryMain from '../MainPage/GroceryMain'
 import GroceryForm from '../MainPage/GroceryForm'
-import { AccountBox } from '../LoginPage/index'
-import Router from "react-router-dom";
 
 //App/Login Page Smoke Test
 it('App renders without crashing', () => {

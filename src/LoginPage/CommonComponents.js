@@ -31,6 +31,7 @@ export const BoldLink = styled.button`
     color: rgba(238,134,202,1);
     font-weight: 500;
     text-decoration: none; 
+    border: none;
 `;
 
 export const Input = styled.input`

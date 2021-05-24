@@ -21,6 +21,8 @@ export default class App extends React.Component {
     return (
     <Router>
       <Switch>
+
+        {/*Login/ Signup*/}
         <Route exact path ="/">
             <AppContainer>
               <AccountBox/>
@@ -30,6 +32,7 @@ export default class App extends React.Component {
       <div className="App">
         <header className="App-main">
     
+        {/*Grocery Page*/}
         <Route path ="/main">
           <GroceryMain/>
          </Route>

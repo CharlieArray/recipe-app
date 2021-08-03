@@ -30,15 +30,12 @@ export default class App extends React.Component {
         </Switch>
 
         <div className="App">
-          <header className="App-main">
-            
             {/*Grocery Page*/}
             <Switch>
               <Route path="/main">
                 <GroceryMain />
               </Route>
             </Switch>
-          </header>
         </div>
       </Router>
     );
